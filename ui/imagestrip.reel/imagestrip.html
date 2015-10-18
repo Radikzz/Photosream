@@ -20,6 +20,7 @@
                     1500
                 ],
                 "contenteditable": "true",
+                "delegate": {"@": "owner"},
                 "dir": "ltr",
                 "draggable": "true",
                 "hasSelectedIndexScrolling": true,
@@ -80,7 +81,7 @@
                 "draggable": "true"
             },
             "bindings": {
-                "src": {"<-": "' https://farm5.staticflickr.com/4074/4910325659_05afbcc028_z.jpg'"}
+                "src": {"<-": "' https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)'"}
             }
         }
     }
@@ -90,7 +91,6 @@
     <div data-montage-id="owner" class="Imagestrip">
         @poster
         @poster
-        
         <div data-montage-id="overlay"></div>
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="imagesFlow">
             <div data-montage-id="poster"></div>
