@@ -70,6 +70,15 @@
             "properties": {
                 "element": {"#": "overlay"}
             }
+        },
+        "poster": {
+            "prototype": "ui/imagestrip.reel/image.reel",
+            "properties": {
+                "element": {"#": "poster"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
         }
     }
     </script>
@@ -80,7 +89,7 @@
         @poster
         <div data-montage-id="overlay"></div>
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="imagesFlow">
-
+            <div data-montage-id="poster"></div>
         </div>
     </div>
 </body>
