@@ -9,12 +9,90 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "ImagesFlow": {
+            "prototype": "montage/ui/flow.reel",
+            "properties": {
+                "element": {"#": "ImagesFlow"},
+                "cameraPosition": [
+                    0,
+                    0,
+                    1500
+                ],
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "paths": [
+                    {
+                        "knots": [
+                            {
+                                "knotPosition": [
+                                    -2400,
+                                    0,
+                                    -1
+                                ],
+                                "nextHandlerPosition": [
+                                    -800,
+                                    0,
+                                    -1
+                                ],
+                                "previousDensity": 10,
+                                "nextDensity": 10
+                            },
+                            {
+                                "knotPosition": [
+                                    2400,
+                                    0,
+                                    -1
+                                ],
+                                "previousHandlerPosition": [
+                                    800,
+                                    0,
+                                    -1
+                                ],
+                                "previousDensity": 10,
+                                "nextDensity": 10
+                            }
+                        ],
+                        "headOffset": 0,
+                        "tailOffset": 0,
+                        "units": {}
+                    }
+                ]
+            }
+        },
+        "overlay": {
+            "prototype": "ui/imagestrip.reel/overlay.reel",
+            "properties": {
+                "element": {"#": "overlay"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
+        },
+        "poster": {
+            "prototype": "ui/imagestrip.reel/image.reel",
+            "properties": {
+                "element": {"#": "poster"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            },
+            "bindings": {
+                "src": {"<-": "'https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)' + imagesFlow:iteration.object.poster_path"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Imagestrip">
+        <div data-montage-id="overlay"></div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="ImagesFlow">
+            <div>
+                <div data-montage-id="poster"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
