@@ -10,10 +10,10 @@
                 "element": {"#": "owner"}
             }
         },
-        "ImagesFlow": {
+        "imagesFlow": {
             "prototype": "montage/ui/flow.reel",
             "properties": {
-                "element": {"#": "ImagesFlow"},
+                "element": {"#": "imagesFlow"},
                 "cameraPosition": [
                     0,
                     0,
@@ -58,32 +58,14 @@
                         "tailOffset": 0,
                         "units": {}
                     }
-                ]
-            },
-            "bindings": {
-                "classList.has('is-hidden')": {"<-": "@owner._flowHidden"},
-                "contentController": {"<-": "@owner._displayedContentController"}
+                ],
+                "stride": "1"
             }
         },
         "overlay": {
-            "prototype": "ui/imagestrip.reel/overlay.reel",
+            "prototype": "montage/ui/overlay.reel",
             "properties": {
-                "element": {"#": "overlay"},
-                "contenteditable": "true",
-                "dir": "ltr",
-                "draggable": "true"
-            }
-        },
-        "poster": {
-            "prototype": "ui/imagestrip.reel/image.reel",
-            "properties": {
-                "element": {"#": "poster"},
-                "contenteditable": "true",
-                "dir": "ltr",
-                "draggable": "true"
-            },
-            "bindings": {
-                "src": {"<-": "'https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)' + imagesFlow:iteration.object.poster_path"}
+                "element": {"#": "overlay"}
             }
         }
     }
@@ -91,11 +73,11 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Imagestrip">
+        @poster
+        @poster
         <div data-montage-id="overlay"></div>
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="ImagesFlow">
-            <div>
-                <div data-montage-id="poster"></div>
-            </div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="imagesFlow">
+            <div></div>
         </div>
     </div>
 </body>
