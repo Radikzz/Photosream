@@ -6,14 +6,14 @@
     right: 0;
     height: 1000px;
 }
-.Moviestrip-flow .montage-Flow-Repetition {
+.Imagestrip-flow .montage-Flow-Repetition {
     opacity: 1;
     -webkit-transition: opacity .5s;
     -moz-transition: opacity .5s;
     -ms-transition: opacity .5s;
     transition: opacity .5s;
 }
-.Moviestrip-flow.is-hidden .montage-Flow-Repetition {
+.Imagestrip-flow.is-hidden .montage-Flow-Repetition {
     opacity: 0;
 }
 .montage-Flow-Slot {
@@ -22,7 +22,7 @@
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
-.Moviestrip-flow .Moviestrip-image  {
+.Imagestrip-flow .Moviestrip-image  {
     position: absolute;
     width: 180px;
     height: 267px;
@@ -34,7 +34,7 @@
     background-size: cover;
     background-position: center center;
 }
-.Moviestrip-flow .Moviestrip-image:before {
+.Imagestrip-flow .Moviestrip-image:before {
     content: "";
     position: absolute;
     top: -26px;
