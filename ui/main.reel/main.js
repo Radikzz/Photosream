@@ -2,7 +2,7 @@
  * @module ui/main.reel
  */
 var Component = require("montage/ui/component").Component,
-    sharedFlickrservices = require("core/tmdb-service").shared;
+    sharedFlickrservices = require("core/flickr-service").shared;
 
 /**
  * @class Main
